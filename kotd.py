@@ -22,7 +22,7 @@ def send_email(filename):
     msg['From'] = fromaddr
     msg['To'] = toaddr
     msg['Subject'] = "Kitty of the Day!"
-    msg.attach(MIMEText("Today's Kitty is... [this will be automated soon; written just for you, love!]", 'plain'))
+    msg.attach(MIMEText("Today's Kitty is...", 'plain'))
     part = MIMEBase('application', 'octet-stream')
     part.set_payload(open(filename, "rb").read())
     encoders.encode_base64(part)
